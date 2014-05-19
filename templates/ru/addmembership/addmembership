@@ -1,0 +1,2 @@
+{{ player.login }} дает {{ target.login }} членство в группе {{ group.name }}
+Причина: {{ reason }}

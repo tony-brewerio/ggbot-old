@@ -1,0 +1,2 @@
+{{ player.login }} censures {{ target.login }} (warn #{{ censure.id }})
+Причина: {{ reason }}

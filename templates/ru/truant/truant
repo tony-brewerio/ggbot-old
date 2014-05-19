@@ -1,0 +1,1 @@
+{{ target.login }} was truanted in game #{{ game.id }} (warn #{{ truant.id }})

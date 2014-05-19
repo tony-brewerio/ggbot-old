@@ -1,0 +1,1 @@
+{{ player.login }} изменяет очки {{ target.login }} => {{ amount }}

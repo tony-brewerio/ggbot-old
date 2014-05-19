@@ -1,0 +1,1 @@
+{{ player.login }} challenges {{ target.login }} ( {{ target.login }}, use .accept or .deny )

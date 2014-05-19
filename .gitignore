@@ -1,0 +1,8 @@
+# IDE specific files
+.idea
+
+# temporary files and logs
+tmp/
+
+# Python specific stuff
+*.pyc

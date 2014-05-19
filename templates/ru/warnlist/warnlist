@@ -1,0 +1,1 @@
+Варны игрока {{ target.login }} => {{ warns | join(', ') }}

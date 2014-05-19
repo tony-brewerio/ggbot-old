@@ -1,0 +1,1 @@
+{{ target.login }} уже состоит в группе {{ group.name }}

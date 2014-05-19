@@ -1,0 +1,2 @@
+Бан #{{ ban.id }}, выдан {{ (ban.by or "`BOT`") }} -> {{ ban.player.login }} ({{ (ban.until or "перманентный") }})
+Причина: {{ ban.reason }}

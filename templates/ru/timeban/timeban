@@ -1,0 +1,2 @@
+{{ player.login }} банит {{ target.login }} до {{ tb.until }} (ban #{{ tb.id }})
+Причина: {{ reason }}

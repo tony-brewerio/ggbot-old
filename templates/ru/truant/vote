@@ -1,0 +1,1 @@
+{{ player.login }} голосует за труант {{ target.login }} [{{ votes.__len__() }}]

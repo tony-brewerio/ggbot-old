@@ -1,0 +1,5 @@
+Пики завершены. Стартует чалл #{{ game.id }} -> \
+[{{ sentinel_captain.login }} Sentinel] vs [Scourge {{ scourge_captain.login }}]
+
+Sentinel ({{ sentinel_score }}): {{ sentinel | join(', ') }}
+Scourge  ({{ scourge_score  }}): {{ scourge  | join(', ') }}

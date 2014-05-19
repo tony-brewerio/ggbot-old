@@ -1,0 +1,1 @@
+{{ player }} переносит аккаунт {{ old_player.login }}  -> {{ new_player.login }}

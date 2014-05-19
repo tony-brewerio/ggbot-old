@@ -1,0 +1,2 @@
+Sentinel : {{ sentinel_stats }}
+Scourge  : {{ scourge_stats }}

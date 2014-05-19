@@ -1,0 +1,37 @@
+Игра #{{ game.id }}  \
+{% if not game.created_by_id %}
+создал Бот \
+{% elif game.type == 'chall' %}
+{{ game.created_by.login }} vs {{ game.accepted_by.login }}  \
+{% else %}
+создал: {{ game.created_by.login }}  режим: {{ game.mode }}  \
+{% endif %}
+статус:  {{ game.status }}
+
+{% if game.status == 'chall' %}
+
+Чалленж еще не был принят {{ game.accepted_by.login }}
+
+{% elif game.status == 'fresh' %}
+
+Пул: {{ game.pool_stats() }}
+
+{% elif game.status == 'pick' %}
+
+Пикер: {{ game.picker().login }}
+Пул: {{ game.pool_stats() }}
+Sentinel({{ game.sentinel_score() }}): {{ game.sentinel_stats() }}
+Scourge({{ game.scourge_score() }}): {{ game.scourge_stats() }}
+
+{% elif game.status == 'ongoing' %}
+
+Sentinel({{ game.sentinel_score() }}): {{ game.sentinel_stats() }}
+Scourge({{ game.scourge_score() }}): {{ game.scourge_stats() }}
+
+{% else %}
+
+Sentinel: {{ game.sentinel_stats() }}
+Scourge: {{ game.scourge_stats() }}
+
+{% endif %}
+

@@ -1,0 +1,4 @@
+Бот запускает игру #{{ game.id }}, режим: {{ game.mode }}
+
+Sentinel ({{ sentinel_score }}): {{ sentinel | join(', ') }}
+Scourge  ({{ scourge_score  }}): {{ scourge  | join(', ') }}

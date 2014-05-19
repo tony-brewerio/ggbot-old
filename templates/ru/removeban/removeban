@@ -1,0 +1,2 @@
+{{ player.login }} отменяет бан #{{ ban.id }}
+Причина: {{ reason }}

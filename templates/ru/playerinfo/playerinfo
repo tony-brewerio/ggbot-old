@@ -1,0 +1,5 @@
+{{ target.login }} : score => {{ stats.score }} : \
+wins/loses => {{ stats.wins }} / {{ stats.loses }} : streak => {{ stats.streak }} : \
+place => {{ place }}/{{ total }}
+
+Состоит в группах => {{ groups | join(', ') }}

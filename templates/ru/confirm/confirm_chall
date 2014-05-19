@@ -1,0 +1,3 @@
+Стартует чалл [{{ sentinel.login }} Sentinel] vs [Scourge {{ scourge.login }}]
+Очередь пикать: {{ sentinel.login }}
+Пул: {{ pool | join(', ') }}

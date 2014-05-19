@@ -1,0 +1,2 @@
+{{ player.login }} пикает {{ target.login }}
+Очередь пикать: {{ game.picker().login }}

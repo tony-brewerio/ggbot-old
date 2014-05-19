@@ -1,0 +1,1 @@
+{{ player.login }} голосует за замену {{ target.login }} -> {{ swap_with.login }} [{{ votes.__len__() }}]

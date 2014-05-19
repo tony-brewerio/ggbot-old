@@ -1,0 +1,1 @@
+{{ player.login }} : {{ target.login }} -> {{ swap_with.login }} в игре #{{ game.id }}

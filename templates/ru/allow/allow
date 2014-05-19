@@ -1,0 +1,1 @@
+{{ player.login }} разрешает {{ target.login }} доступ в игру

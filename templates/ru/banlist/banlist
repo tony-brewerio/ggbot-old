@@ -1,0 +1,1 @@
+Баны игрока {{ target.login }} => {{ bans | join(', ') }}

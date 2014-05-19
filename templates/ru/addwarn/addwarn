@@ -1,0 +1,2 @@
+{{ player.login }} выдает {{ target.login }} варн {{ warn.type }} (warn #{{ warn.id }})
+Причина: {{ reason }}

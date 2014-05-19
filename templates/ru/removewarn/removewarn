@@ -1,0 +1,2 @@
+{{ player.login }} отменяет варн #{{ warn.id }}
+Причина: {{ reason }}

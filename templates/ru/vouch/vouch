@@ -1,0 +1,2 @@
+{{ player.login }} дает воуч {{ target.login }}
+Причина: {{ reason }}

@@ -1,0 +1,1 @@
+{{ player.login }} добавляет в пул {{ target.login }}
