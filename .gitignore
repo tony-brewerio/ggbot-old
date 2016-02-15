@@ -2,7 +2,7 @@
 .idea
 
 # temporary files and logs
-tmp/
+/tmp
 
 # Python specific stuff
 *.pyc
