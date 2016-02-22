@@ -29,7 +29,7 @@ class Player(Param):
             if len(players) == 0:
                 raise BotError('param/player_not_found', criteria = raw)
             elif len(players) > 1:
-                raise BotError('param/player_too_many', criteria = raw, 
+                raise BotError('param/player_too_many', criteria = raw,
                                found = [p.login for p in players])
             return players[0]
 

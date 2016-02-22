@@ -38,7 +38,7 @@ def test_result():
         filter(memberships__active = True,
                memberships__room = room,
                memberships__group__name = 'player')[:10]:
-        SignUser(room = room, bot = bot, player = twik, param_string = player.login)()
+        SignUser(room = room, bot = bot, player = twik, param_string = player.auth)()
 
     assert room.current_game().gamestats.count() == 10
 

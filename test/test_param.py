@@ -13,7 +13,7 @@ def test_player_param():
         params = ['target', param.Player()]
 
         def action(self):
-            self.announces.append(self.target.login)
+            self.announces.append(self.target.auth)
 
 
     from gbot.models import Player, Room
@@ -59,7 +59,7 @@ def test_player_param():
         params = ['target', param.Player(lambda action: action.player)]
 
         def action(self):
-            self.announces.append(self.target.login)
+            self.announces.append(self.target.auth)
 
     action = ParamIsSelfPlayerByDefault(player = gaylord, room = room, param_string = '')
     action()

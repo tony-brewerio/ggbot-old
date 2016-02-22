@@ -27,7 +27,7 @@ def test_regular_confirm():
     for player in Player.filter(memberships__active = True,
                                 memberships__room = room,
                                 memberships__group__name = 'player')[:10]:
-        SignUser(room = room, player = twik, param_string = player.login)()
+        SignUser(room = room, player = twik, param_string = player.auth)()
 
     assert room.current_game().gamestats.count() == 10
 
@@ -50,7 +50,7 @@ def test_regular_confirm():
     for player in Player.filter(memberships__active = True,
                                 memberships__room = room,
                                 memberships__group__name = 'player'):
-        SignUser(room = room, player = twik, param_string = player.login)()
+        SignUser(room = room, player = twik, param_string = player.auth)()
 
 
     action = Confirm(room = room, player = twik)()

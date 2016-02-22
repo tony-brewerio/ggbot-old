@@ -26,13 +26,13 @@ def test_truant():
     action = StartGame(room = room, player = twik)()
     assert room.current_game() and room.current_game() == twik.current_game()
 
-    SignUser(room = room, player = twik, param_string = imba.login)()
+    SignUser(room = room, player = twik, param_string = imba.auth)()
 
     for player in Player.exclude(login = 'imbamania').\
         filter(memberships__active = True,
                memberships__room = room,
                memberships__group__name = 'player')[:10]:
-        SignUser(room = room, player = twik, param_string = player.login)()
+        SignUser(room = room, player = twik, param_string = player.auth)()
 
     assert room.current_game().gamestats.count() == 10
 

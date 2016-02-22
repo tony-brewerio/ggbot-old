@@ -34,7 +34,7 @@ def test_pick():
     for player in Player.filter(memberships__active = True,
                                 memberships__room = room,
                                 memberships__group__name = 'player'):
-        SignUser(room = room, player = twik, param_string = player.login)()
+        SignUser(room = room, player = twik, param_string = player.auth)()
 
     action = Confirm(room = room, player = twik)()
     assert twik.current_game().status == 'pick'
@@ -50,12 +50,12 @@ def test_pick():
 
     pool = list(twik.current_game().gamestats.filter(team = 'pool').select_related('player'))
 
-    action = Pick(room = room, player = scourge_captain, param_string = pool[0].player.login)()
+    action = Pick(room = room, player = scourge_captain, param_string = pool[0].player.auth)()
     assert u"Не ваша очередь пикать" in action.privates[0][1]
 
     for i in xrange(8):
         action = Pick(room = room, player = twik.current_game().picker(),
-                      param_string = pool.pop().player.login)()
+                      param_string = pool.pop().player.auth)()
 
     assert twik.current_game().status == 'ongoing'
 
