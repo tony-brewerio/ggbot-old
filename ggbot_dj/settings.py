@@ -120,3 +120,44 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Logging configuration
+# Background twisted daemon is configured to use stdlib logging as well
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'main': {
+            'format': '%(asctime)s - %(levelname)-8s - %(name)s - %(message)s',
+        },
+    },
+    'handlers': {
+        'console': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+            'formatter': 'main',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console'],
+            'level': 'DEBUG',
+            'propagate': False,
+        },
+        '': {
+            'handlers': ['console'],
+            'level': 'DEBUG',
+            'propagate': False,
+        },
+    },
+}
+
+GGBOT = {
+    'auth': {
+        'server': 'langame.auth.garenanow.com',
+        'port': 7456,
+    },
+    'room': {
+        'port': 8687,
+    }
+}
